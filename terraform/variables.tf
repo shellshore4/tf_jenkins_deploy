@@ -10,7 +10,7 @@ variable "secret_key" {
 
 variable "key_pair" {
     description = "value of key for SSH"
-    default = "jenkinsserver"
+    default = ""
   
 }
   
