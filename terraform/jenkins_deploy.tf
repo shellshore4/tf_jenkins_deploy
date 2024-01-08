@@ -3,6 +3,7 @@ provider "aws" {
     secret_key = "${var.secret_key}"
     region = "us-east-2"
 }
+
 module "ec2" {
     source  = "terraform-aws-modules/ec2-instance/aws"
     version = "2.16.0"
@@ -11,8 +12,8 @@ module "ec2" {
     ami = var.ami_id
     instance_type = var.instance_type
     key_name = var.key_pair
-    vpc_security_group_ids = [aws_security_group.YOURNAME.id]
-    subnet_id =  module.vpc.public_subnets[0]
+    vpc_security_group_ids = [aws_security_group.NAME.id]
+    subnet_id =  var.public_subnets
     associate_public_ip_address = true
     
     tags = {
