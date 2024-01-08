@@ -1,4 +1,4 @@
-resource "aws_security_group" "allow_ssh" {
+resource "aws_security_group" "REFERENCE_NAME" {
   name        = "Jenkins SSH"
   description = "Allow inbound SSH from all IPs"
 
