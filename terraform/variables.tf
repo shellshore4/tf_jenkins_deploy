@@ -30,20 +30,6 @@ variable "vpc_name" {
   default     = "VPCName"
 }
 
-variable "cidr" {
-  description = "CIDR block for the VPC"
-  default     = "10.0.0.0/16"
-}
-
-variable "azs" {
-  description = "Availability zones"
-  default     = ["us-east-2a"]
-}
-
-variable "private_subnets" {
-  description = "CIDR blocks for the private subnets"
-  default     = ["10.0.1.0/24"]
-}
 
 variable "public_subnets" {
   description = "CIDR blocks for the public subnets"
